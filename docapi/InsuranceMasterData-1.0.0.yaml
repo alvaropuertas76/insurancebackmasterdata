@@ -1,0 +1,302 @@
+openapi: 3.0.0
+info:
+  title: Master Data Triatlhon Policy API
+  description: Master Data Triatlhon Policy API
+  contact:
+    email: alvaropuertas76@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/ALVAROPUERTAS76/InsuranceMasterData/1.0.0
+    description: SwaggerHub API
+tags:
+  - name: Triatlhon Policy Product
+    description: Operations available to developers
+paths:
+  /event:
+    get:
+      tags:
+        - Triatlhon Policy Product
+      summary: searching triatlhon events
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: getEvent
+      parameters:
+        - name: name
+          in: query
+          description: name of the event
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: id of the event
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Event'
+        "400":
+          description: bad input parameter
+  /wetsuit:
+    get:
+      tags:
+        - Triatlhon Policy Product
+      summary: searching wetsuit
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: getWetsuit
+      parameters:
+        - name: brand
+          in: query
+          description: brand of the wetsuit
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: model
+          in: query
+          description: model of the wetsuit
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: id of the wetsuit
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Wetsuit'
+        "400":
+          description: bad input parameter
+  /bike:
+    get:
+      tags:
+        - Triatlhon Policy Product
+      summary: searching bikes
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: getBike
+      parameters:
+        - name: brand
+          in: query
+          description: brand of the bike
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: model
+          in: query
+          description: model of the bike
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: id of the bike
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bike'
+        "400":
+          description: bad input parameter
+  /helmet:
+    get:
+      tags:
+        - Triatlhon Policy Product
+      summary: searching helmets
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: getHelmet
+      parameters:
+        - name: brand
+          in: query
+          description: brand of the helmet
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: model
+          in: query
+          description: model of the helmet
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+        - name: id
+          in: query
+          description: id of the helmet
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Helmet'
+        "400":
+          description: bad input parameter
+components:
+  schemas:
+    Event:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        name:
+          type: string
+          example: IRONMAN FRANKFURT
+        brand:
+          type: string
+          example: IRONMAN
+        city:
+          type: string
+          example: FRANKFURT
+        location:
+          type: string
+          example: lat=45.411&lon=-75.698
+        date:
+          type: string
+          example: 28/08/2024
+        description:
+          type: string
+          example: description example
+        URLImage:
+          type: string
+          example: https://ironman.kleecks-cdn.com/cdn1/attachments/photo/7525-199685611/IMFFM_racecard.jpg
+    Wetsuit:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        brand:
+          type: string
+          example: HUUB
+        model:
+          type: string
+          example: Brownlee Agilis 4:4
+        year:
+          type: string
+          example: "2022"
+        marketValue:
+          type: number
+          format: double
+          example: 799
+        currency:
+          type: string
+          example: EURO
+        description:
+          type: string
+          example: Huub ha estado trabajando con los hermanos Brownlee para crear el traje de neopreno de triatlón definitivo para un rendimiento de élite
+        URLImage:
+          type: string
+          example: https://img.fruugo.com/product/8/00/1391053008_max.jpg
+    Bike:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        brand:
+          type: string
+          example: TREK
+        model:
+          type: string
+          example: MADONE
+        year:
+          type: string
+          example: "2019"
+        marketValue:
+          type: number
+          format: double
+          example: 11499
+        currency:
+          type: string
+          example: EURO
+        description:
+          type: string
+          example: La Madone SLR 7 AXS Gen 7 es la máquina de competición definitiva
+        URLImage:
+          type: string
+          example: "https://media.trekbikes.com/image/upload/f_auto,fl_progressive:semi,q_auto,w_1920,h_1440,c_pad/MadoneSLR7AXS-24-41759-B-Portrait"
+    Helmet:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        brand:
+          type: string
+          example: RUDY PROJECT
+        model:
+          type: string
+          example: The Wing
+        year:
+          type: string
+          example: "2024"
+        marketValue:
+          type: number
+          format: double
+          example: 399.9
+        currency:
+          type: string
+          example: EURO
+        description:
+          type: string
+          example: "The Wing revolutionizes the concept of aerodynamics in cycling helmets. With its innovative structure and futuristic design, it optimizes performance by reducing air resistance, for cyclists and triathletes who want to push beyond every limit"
+        URLImage:
+          type: string
+          example: https://www.rudyproject.com/sites/default/files/2024-02/rudyproject-the-wing-HL73006%23-cosmic-blue-matte.jpg

@@ -1,0 +1,20 @@
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+
+spring:
+  application:
+    name: insurance
+
+  data:
+    mongodb:
+      database: zurich
+      uri: mongodb+srv://alvaropuertas76:e1oAoxL45wmEXNIL@cluster.hzg57.mongodb.net/?retryWrites=true&w=majority&appName=cluster
