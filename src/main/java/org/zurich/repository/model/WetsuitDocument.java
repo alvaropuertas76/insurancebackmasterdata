@@ -12,7 +12,7 @@ public class WetsuitDocument {
   private String brand;
   private String model;
   private String year;
-  private Double market_value;
+  private Double marketValue;
   private String currency;
   private String description;
   private String URLImage;
@@ -57,12 +57,12 @@ public class WetsuitDocument {
     this.year = year;
   }
 
-  public Double getMarket_value() {
-    return market_value;
+  public Double getMarketValue() {
+    return marketValue;
   }
 
-  public void setMarket_value(Double market_value) {
-    this.market_value = market_value;
+  public void setMarketValue(Double marketValue) {
+    this.marketValue = marketValue;
   }
 
   public String getCurrency() {

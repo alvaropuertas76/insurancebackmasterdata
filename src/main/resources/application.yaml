@@ -12,7 +12,7 @@ management:
 
 spring:
   application:
-    name: insurance
+    name: masterdata
 
   data:
     mongodb:

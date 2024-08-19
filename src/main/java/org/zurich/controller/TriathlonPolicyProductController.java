@@ -116,7 +116,7 @@ public class TriathlonPolicyProductController implements TriatlhonPolicyProductA
         wetsuit.setBrand(wetsuitDocument.getBrand());
         wetsuit.setModel(wetsuitDocument.getModel());
         wetsuit.setYear(wetsuitDocument.getYear());
-        wetsuit.setMarketValue(wetsuitDocument.getMarket_value());
+        wetsuit.setMarketValue(wetsuitDocument.getMarketValue());
         wetsuit.setCurrency(wetsuitDocument.getCurrency());
         return wetsuit;
     }
