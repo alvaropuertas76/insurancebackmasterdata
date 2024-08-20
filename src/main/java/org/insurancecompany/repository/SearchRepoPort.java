@@ -1,9 +1,9 @@
-package org.zurich.repository;
+package org.insurancecompany.repository;
 
-import org.zurich.repository.model.BikeDocument;
-import org.zurich.repository.model.EventDocument;
-import org.zurich.repository.model.HelmetDocument;
-import org.zurich.repository.model.WetsuitDocument;
+import org.insurancecompany.repository.model.BikeDocument;
+import org.insurancecompany.repository.model.EventDocument;
+import org.insurancecompany.repository.model.HelmetDocument;
+import org.insurancecompany.repository.model.WetsuitDocument;
 
 import java.util.List;
 

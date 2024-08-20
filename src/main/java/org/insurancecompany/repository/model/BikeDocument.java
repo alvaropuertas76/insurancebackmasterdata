@@ -1,9 +1,9 @@
-package org.zurich.repository.model;
+package org.insurancecompany.repository.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document (collection = "helmet")
-public class HelmetDocument {
+@Document (collection = "bike")
+public class BikeDocument {
   private String Id;
   private String searchId;
   private String brand;

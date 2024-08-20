@@ -1,9 +1,6 @@
-package org.zurich.repository.model;
+package org.insurancecompany.repository.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDate;
-import java.util.List;
 
 @Document (collection = "wetsuit")
 public class WetsuitDocument {

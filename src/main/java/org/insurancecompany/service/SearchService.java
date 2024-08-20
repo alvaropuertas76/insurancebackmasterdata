@@ -1,10 +1,10 @@
-package org.zurich.service;
+package org.insurancecompany.service;
 
-import org.zurich.repository.SearchRepoPort;
-import org.zurich.repository.model.BikeDocument;
-import org.zurich.repository.model.EventDocument;
-import org.zurich.repository.model.HelmetDocument;
-import org.zurich.repository.model.WetsuitDocument;
+import org.insurancecompany.repository.SearchRepoPort;
+import org.insurancecompany.repository.model.BikeDocument;
+import org.insurancecompany.repository.model.EventDocument;
+import org.insurancecompany.repository.model.HelmetDocument;
+import org.insurancecompany.repository.model.WetsuitDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;

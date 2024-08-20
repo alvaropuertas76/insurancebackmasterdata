@@ -1,15 +1,15 @@
-package org.zurich.controller;
+package org.insurancecompany.controller;
 
-import org.zurich.api.TriatlhonPolicyProductApi;
-import org.zurich.model.Bike;
-import org.zurich.model.Event;
-import org.zurich.model.Helmet;
-import org.zurich.model.Wetsuit;
-import org.zurich.repository.model.BikeDocument;
-import org.zurich.repository.model.EventDocument;
-import org.zurich.repository.model.HelmetDocument;
-import org.zurich.repository.model.WetsuitDocument;
-import org.zurich.service.SearchServiceI;
+import org.insurancecompany.api.TriatlhonPolicyProductApi;
+import org.insurancecompany.model.Bike;
+import org.insurancecompany.model.Event;
+import org.insurancecompany.model.Helmet;
+import org.insurancecompany.model.Wetsuit;
+import org.insurancecompany.repository.model.BikeDocument;
+import org.insurancecompany.repository.model.EventDocument;
+import org.insurancecompany.repository.model.HelmetDocument;
+import org.insurancecompany.repository.model.WetsuitDocument;
+import org.insurancecompany.service.SearchServiceI;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
